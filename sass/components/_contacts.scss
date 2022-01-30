@@ -1,0 +1,21 @@
+.contacts {
+  font-style: normal;
+  width: 231px;
+  display: inline-block;
+}
+
+.contacts__link {
+  color: $sacondary-white-color;
+  .contacts__item:hover &,
+  .contacts__item:focus & {
+    color: $accent-color;
+  }
+}
+
+.contacts__link--accent {
+  color: $white-color;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}

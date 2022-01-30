@@ -1,0 +1,16 @@
+.our-team {
+  background-color: $primary-background-color;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.our-team-main {
+  &__container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  &__list {
+    display: flex;
+    text-align: center;
+  }
+}

@@ -1,0 +1,33 @@
+.footer {
+  background-color: $footer-bacground-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-main__container {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  display: flex;
+  align-items: baseline;
+}
+
+.appeal,
+.form-wrap__appeal {
+  @include fonts($white-color, 700, 14px, 1.14, 0.01em);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.addres-wrap__footer-main {
+  margin-right: 70px;
+}
+
+.addres-wrap {
+  display: block;
+  width: 100%;
+}
+
+.appeal-wrap {
+  margin-right: 93px;
+}

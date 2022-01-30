@@ -1,0 +1,13 @@
+@mixin fonts($color, $fw, $fs, $lh, $ls) {
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin border($width: 1px, $kind: solid, $color: transparent) {
+  border: $width $kind $color;
+}
+
+//  border: 1px solid transparent;

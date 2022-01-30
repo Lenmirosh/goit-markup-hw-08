@@ -1,0 +1,21 @@
+.logo {
+  font-family: Raleway;
+  @include fonts($logo-text-color, 700, 26px, 1.19, null);
+  &__design {
+    color: $accent-color;
+  }
+}
+
+.header-nav__logo {
+  margin-right: 93px;
+}
+
+.logo--inverse {
+  @extend .logo;
+  color: $white-color;
+  display: inline-block;
+}
+
+.addres-wrap__logo--inverse {
+  margin-bottom: 20px;
+}

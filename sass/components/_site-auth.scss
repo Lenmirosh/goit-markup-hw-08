@@ -1,0 +1,21 @@
+.site-auth {
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+  &__item:not(:last-child) {
+    margin-right: $variable-grid;
+  }
+}

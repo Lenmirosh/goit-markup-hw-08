@@ -1,0 +1,99 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc(100% / 3 - #{$variable-grid});
+    margin-top: $variable-grid;
+    margin-left: $variable-grid;
+  }
+
+  &__card-description {
+    padding: 20px 24px 20px 24px;
+    @include border($color: #eeeeee);
+  }
+
+  &__card-thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    top: 0px;
+    left: 0px;
+    /* opacity: 0; */
+    padding: 63px 24px 63px 24px;
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__overlay-text {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  &__kind-works {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /* background-color: royalblue; */
+    font-size: 16px;
+    line-height: 1.88;
+    color: $primary-text-color;
+  }
+}
+.gallery-main__gallery {
+  margin-top: calc(-1 * #{$variable-grid});
+  margin-left: calc(-1 * #{$variable-grid});
+}
+
+.gallery__link {
+  display: block;
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover {
+    .gallery__overlay {
+      transform: translateY(0);
+      pointer-events: none;
+      opacity: 1;
+    }
+  }
+}
+
+.gallery-main__title--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.gallery-main {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.gallery__title-works {
+  margin-top: 0px;
+  margin-bottom: 4px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  @include fonts($title-text-color, 700, 18px, 1.71, 0.06em);
+}

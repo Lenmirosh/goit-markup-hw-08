@@ -1,0 +1,41 @@
+body {
+  font-family: Roboto, sans-serif;
+  @include fonts($primary-text-color, 400, 14px, 1.71, 0.03em);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section__main {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.animation-baсkground-color {
+  transition: 250ms background-color cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animation-color {
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animation-fill {
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animation-opacity {
+  transition: 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animation-border {
+  transition: 250ms border cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animation-shadow {
+  transition: 250ms shadow cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animation-outline {
+  transition: 250ms outline cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animation-transform {
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+}

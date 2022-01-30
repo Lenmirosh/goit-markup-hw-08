@@ -1,0 +1,32 @@
+.sosial-list {
+  @extend %flex;
+
+  &__icon {
+    fill: $icons-color;
+  }
+}
+
+.sosial-list__link {
+  @extend %flex;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: $white-color;
+  border-radius: 50%;
+  margin-right: 10px;
+
+  &--dark {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.sosial-list__icon {
+  .sosial-list__link:hover &,
+  .sosial-list__link:focus & {
+    fill: $white-color;
+  }
+}

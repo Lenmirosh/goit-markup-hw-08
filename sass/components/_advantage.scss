@@ -1,0 +1,50 @@
+.advantage {
+  padding-bottom: 0px;
+  background-color: $white-color;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &__title {
+    @include fonts($title-text-color, 700, null, 1.14, null);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+.advantage-main {
+  &__container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  &__item::before {
+    display: block;
+    height: 120px;
+    content: "";
+    background-color: $primary-background-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+
+  &__item:not(:nth-child(4n)) {
+    margin-right: $variable-grid;
+  }
+}
+$icons: "antenna", "clock", "diagram", "astronaut";
+@each $iconName in $icons {
+  $i: index($icons, $iconName);
+  .advantage-main__item:nth-child(#{$i}):before {
+    background-image: url(../img/#{$iconName}.svg);
+  }
+}
+// /#{$iconName}.svg

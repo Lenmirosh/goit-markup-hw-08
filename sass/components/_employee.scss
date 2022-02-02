@@ -1,8 +1,38 @@
 .our-team-main__list {
+  @media screen and (min-width: 768px) {
+    margin-bottom: $variable-grid * (-1);
+  }
+
   &-item {
-    flex-basis: calc((100% - 90px) / 4);
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+      margin-bottom: $variable-grid;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 90px) / 4);
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: $variable-grid;
+    }
+    // flex-basis: calc((100% - 90px) / 4);
+
+    &:not(:nth-child(2n)) {
+      @media screen and (min-width: 768px) {
+        margin-right: $variable-grid;
+      }
+      // margin-right: $variable-grid;
+    }
     &:not(:nth-child(4n)) {
-      margin-right: $variable-grid;
+      @media screen and (min-width: 1200px) {
+        margin-right: $variable-grid;
+      }
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: 767px) {
+        margin-bottom: $variable-grid;
+      }
     }
   }
 
@@ -26,5 +56,5 @@
 }
 
 .our-team-main__sosial-list:not(:last-child) {
-  margin-right: 10px;
+  // margin-right: 10px;
 }

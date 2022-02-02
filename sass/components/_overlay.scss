@@ -1,6 +1,9 @@
 .overlay {
-  max-width: 1600px;
+  // max-width: 1600px;
   height: 600px;
+  @media screen and (max-width: 1199px) {
+    height: 400px;
+  }
 
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),

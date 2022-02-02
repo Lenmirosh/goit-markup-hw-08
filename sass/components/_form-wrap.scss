@@ -1,42 +1,77 @@
 .form-wrap {
+  text-align: center;
+
   &__form {
-    width: 570px;
-    height: 86px;
+    // width: 570px;
+    // height: 86px;
+    @media screen and (min-width: 1200px) {
+      width: 570px;
+      height: 86px;
+    }
   }
   &__enter {
-    display: flex;
+    // display: flex;
     position: relative;
     width: 100%;
     overflow: hidden;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+  &__field {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 }
 
 .form-wrap__label {
   position: absolute;
-  top: 50%;
+  top: 15%;
   left: 16px;
   padding: 0px;
   margin: 0px;
-  transform: translateY(-50%);
+  transform: translateY(-15%);
 
   .form-wrap__input:focus + &,
   .form-wrap__input:not(:placeholder-shown) + &,
   .form-wrap__input:hover + & {
     transform: translateY(-60px);
   }
+
+  @media screen and (min-width: 768px) {
+    left: 21%;
+    // transform: translateX(20%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 15px;
+    left: 16px;
+    // transform: translateY(-50%);
+  }
 }
 
 .form-wrap__input {
-  width: calc(100% - 212px);
+  // width: calc(100% - 212px);
   height: 50px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: $footer-bacground-color;
   color: $white-color;
-  margin-right: 8px;
+  // margin-right: 8px;
   padding-left: 16px;
   padding-right: 16px;
   &:focus {
     outline: none;
+  }
+  width: 100%;
+  margin-bottom: 20px;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 8px;
+    width: calc(100% - 212px);
   }
 }

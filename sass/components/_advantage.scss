@@ -1,8 +1,19 @@
 .advantage {
   padding-bottom: 0px;
   background-color: $white-color;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  // padding-top: 94px;
+  // padding-bottom: 94px;
   &__title {
     @include fonts($title-text-color, 700, null, 1.14, null);
     text-transform: uppercase;
@@ -28,23 +39,56 @@
   }
 
   &__list {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: $variable-grid * (-1);
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - 90px) / 4);
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: $variable-grid;
+    }
+
+    // flex-basis: calc((100% - 90px) / 4);
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 90px) / 4);
+    }
   }
 
   &__item:not(:nth-child(4n)) {
-    margin-right: $variable-grid;
+    // margin-right: $variable-grid;
   }
-}
-$icons: "antenna", "clock", "diagram", "astronaut";
-@each $iconName in $icons {
-  $i: index($icons, $iconName);
-  .advantage-main__item:nth-child(#{$i}):before {
-    background-image: url(../img/#{$iconName}.svg);
+  &__item:not(:nth-child(2n)) {
+    @media screen and (min-width: 768px) {
+      margin-right: $variable-grid;
+    }
   }
+  &__item:not(:nth-child(4n)) {
+    @media screen and (min-width: 1200px) {
+      margin-right: $variable-grid;
+    }
+  }
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: $variable-grid;
+    }
+  }
+
+  $icons: "antenna", "clock", "diagram", "astronaut";
+  @each $iconName in $icons {
+    $i: index($icons, $iconName);
+    .advantage-main__item:nth-child(#{$i}):before {
+      background-image: url(../img/#{$iconName}.svg);
+    }
+  }
+  // /#{$iconName}.svg
 }
-// /#{$iconName}.svg

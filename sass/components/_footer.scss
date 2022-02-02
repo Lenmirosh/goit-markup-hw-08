@@ -3,31 +3,74 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer-main {
+}
 
 .footer-main__container {
   padding-top: 0px;
   padding-bottom: 0px;
-  display: flex;
-  align-items: baseline;
+  // display: flex;
+  // align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
-
+.footer-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    // flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    margin-bottom: 0px;
+  }
+}
 .appeal,
 .form-wrap__appeal {
   @include fonts($white-color, 700, 14px, 1.14, 0.01em);
   text-transform: uppercase;
   display: block;
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .addres-wrap__footer-main {
-  margin-right: 70px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+
+  // margin-right: 70px;
 }
 
 .addres-wrap {
   display: block;
-  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .appeal-wrap {
-  margin-right: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+  // margin-right: 93px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
+    text-align: center;
+    margin-left: 165px;
+  }
 }

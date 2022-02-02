@@ -1,6 +1,6 @@
 .hero {
-  display: block;
-  margin: 0 auto;
+  // display: block;
+  // margin: 0 auto;
   text-align: center;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -9,12 +9,19 @@
     background-color: $footer-bacground-color;
     padding-top: 200px;
     padding-bottom: 200px;
+    @media screen and (max-width: 1199px) {
+      padding-top: 118px;
+    }
   }
   &-title {
     display: block;
     width: 696px;
     @include fonts($white-color, 900, 44px, 1.36, 0.06em);
     text-transform: uppercase;
+    @media screen and (max-width: 1199px) {
+      @include fonts(null, null, 26px, 1.62, null);
+      max-width: 360px;
+    }
     margin: 0 auto;
     padding-bottom: $variable-grid;
   }

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -22,17 +23,45 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="backdrop-thumb">
-      <header class="header header--no-border">
+    <!-- <div class="backdrop-thumb">
+      <header class="header header--no-border"> -->
         <!-- Навигация -->
-        <div class="container header-container">
+        <!-- <div class="container header-container">
           <nav class="header-nav">
-            <a href="./index.html" class="link logo header-nav__logo">
-              <span class="logo__design">Web</span>Studio</a
-            >
+            <div class="header-nav__thumb">
+              <a href="./index.html" class="link logo header-nav__logo">
+                <span class="logo__design">Web</span>Studio</a
+              >
+              <button
+                class="header-nav__button is-open"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-container"
+                data-menu-button
+              >
+                <svg
+                  class=""
+                  aria-label="Переключатель мобильного меню"
+                  width="40"
+                  height="40"
+                >
+                  <use
+                    class="icon-close"
+                    href="./img/symbol-defs2.svg#icon-close_40px"
+                  ></use>
+                  <use
+                    class="icon-menu"
+                    href="./img/symbol-defs2.svg#icon-menu_40px"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+            <div class="menu-container is-open" id="menu-container" data-menu>
+              Контент меню
+            </div> -->
             <!-- <div class="header-nav"> -->
 
-            <ul class="site-nav list">
+            <!-- <ul class="site-nav list">
               <li class="site-nav__item">
                 <a
                   href="../goit-markup-hw-07-1/index.html"
@@ -58,11 +87,11 @@
                 </a>
               </li>
             </ul>
-          </nav>
+          </nav> -->
 
           <!-- site-auth -->
 
-          <ul class="site-auth site-auth__header-container list">
+          <!-- <ul class="site-auth site-auth__header-container list">
             <li class="list site-auth__item">
               <a
                 href="mailto:info@devstudio.com"
@@ -88,7 +117,7 @@
           </ul>
         </div>
       </header>
-      <main class="main">
+      <main class="main"> -->
         <!-- Герой -->
 
         <section class="hero-container overlay main__overlay">
@@ -608,12 +637,13 @@
             </ul>
           </div>
         </section>
-      </main>
+      </main> 
 
       <!-- Футер -->
 
       <footer class="footer">
         <div class="footer-main container footer-main__container">
+          <div class="footer-wrap">
           <div class="addres-wrap">
             <a
               href="./index.html"
@@ -698,6 +728,7 @@
                 </a>
               </li>
             </ul>
+          </div>
           </div>
           <div class="form-wrap">
             <form class="form-wrap__form" autocomplete="off">
@@ -859,6 +890,7 @@
           </form>
 
           <script src="./js/modal.js"></script>
+          <script src="./js/menu.js"></script>
         </div>
       </div>
     </div>

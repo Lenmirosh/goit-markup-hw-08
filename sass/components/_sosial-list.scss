@@ -30,3 +30,25 @@
     fill: $white-color;
   }
 }
+
+.sosial-list--name {
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+
+  display: flex;
+  @include fonts($primary-text-color, 500, 18px, 1.22, 0.02em);
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    color: $primary-text-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}

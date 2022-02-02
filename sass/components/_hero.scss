@@ -15,7 +15,7 @@
   }
   &-title {
     display: block;
-    width: 696px;
+    // width: 696px;
     @include fonts($white-color, 900, 44px, 1.36, 0.06em);
     text-transform: uppercase;
     @media screen and (max-width: 1199px) {

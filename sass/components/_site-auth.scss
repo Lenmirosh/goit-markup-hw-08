@@ -8,6 +8,10 @@
     color: $accent-color;
   }
   &__icon {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
     fill: currentColor;
     margin-right: 10px;
   }
@@ -17,5 +21,22 @@
   }
   &__item:not(:last-child) {
     margin-right: $variable-grid;
+  }
+
+  &__item--big-tel {
+    @media screen and (max-width: 767px) {
+      @include fonts(null, null, 34px, 1.17, null);
+      margin-bottom: 124px;
+      position: relative;
+    }
+  }
+
+  &__item--under {
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      top: 634px;
+      left: 40px;
+      @include fonts(null, null, 24px, 1.17, null);
+    }
   }
 }

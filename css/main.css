@@ -148,7 +148,7 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .container {
+  .container .container--menu {
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -160,7 +160,6 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-left: 40px;
   }
 }
 
@@ -212,7 +211,7 @@ img {
   min-height: 60px;
 }
 
-.header-nav__button {
+.header-nav__button-open {
   display: inline-block;
   margin: 0px;
   padding: 0px;
@@ -220,24 +219,36 @@ img {
   background-color: transparent;
 }
 
-.header-nav__button:hover, .header-nav__button:focus {
+.header-nav__button-open:hover, .header-nav__button-open:focus {
   fill: #2196f3;
 }
 
-.menu-container__button-close .icon-close {
-  display: none;
+@media screen and (min-width: 768px) {
+  .header-nav__button-open {
+    display: none;
+  }
 }
 
-.menu-container__button-close .icon-close {
-  display: block;
-}
-
-.header-nav__button-open.is-open .icon-menu {
-  display: none;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0px;
+  }
 }
 
 .site-nav__link:hover, .site-nav__link:focus {
   color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -278,6 +289,12 @@ img {
   .site-nav__link {
     font-size: 40px;
     line-height: 1.18;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__link:not(:last-child) {
+    margin-bottom: 32px;
   }
 }
 
@@ -404,6 +421,12 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
+
 .menu-container.is-open {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -422,6 +445,14 @@ img {
 
 .menu-container__button-close:hover, .menu-container__button-close:focus {
   fill: #2196f3;
+}
+
+.mob-menu-top {
+  padding-left: 25px;
+}
+
+.mob-menu-bottom {
+  padding-left: 25px;
 }
 
 .advantage {
@@ -1084,7 +1115,6 @@ img {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   min-width: 200px;
   border: 0px solid transparent;
-  color: white-color;
   background-color: #2196f3;
   cursor: pointer;
 }

@@ -1,5 +1,5 @@
 .primary-button {
-  // display: inline-block;
+  display: inline-block;
   @include fonts($white-color, 700, 16px, 1.88, 0.06em);
   padding: 10px 32px;
   border-radius: 4px;
@@ -55,5 +55,5 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
-  z-index: 1000;
+  // z-index: 1000;
 }

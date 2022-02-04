@@ -1,13 +1,15 @@
 .menu-container {
   // display: none;
+  position: relative;
   position: fixed;
   top: 0px;
-  left: 0;
+  left: 0px;
   width: 100vw;
   height: 100vh;
   z-index: 999;
+  overflow-y: scroll;
   @media screen and (max-width: 767px) {
-    padding: 48px 0 48px 40px;
+    padding: 48px 0 48px 0;
   }
 
   transform: translateY(-100%);
@@ -20,5 +22,20 @@
   &.is-open {
     // display: block;
     transform: translateY(0);
+  }
+}
+.menu-container__button-close {
+  position: absolute;
+  top: -38px;
+  right: 15px;
+
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
   }
 }

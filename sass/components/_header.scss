@@ -49,12 +49,12 @@
   }
 }
 
-.header-nav__button .icon-close {
+.menu-container__button-close .icon-close {
   display: none;
 }
-.header-nav__button.is-open .icon-close {
+.menu-container__button-close .icon-close {
   display: block;
 }
-.header-nav__button.is-open .icon-menu {
+.header-nav__button-open.is-open .icon-menu {
   display: none;
 }

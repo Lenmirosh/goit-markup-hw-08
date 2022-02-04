@@ -33,11 +33,11 @@
                 <span class="logo__design">Web</span>Studio</a
               >
               <button
-                class="header-nav__button is-open"
+                class="header-nav__button-open js-open-menu is-open"
                 type="button"
                 aria-expanded="false"
                 aria-controls="menu-container"
-                data-menu-button
+                data-menu-open
               >
                 <svg
                   class=""
@@ -46,92 +46,124 @@
                   height="40"
                 >
                   <use
-                    class="icon-close"
-                    href="./img/symbol-defs2.svg#icon-close_40px"
-                  ></use>
-                  <use
                     class="icon-menu"
                     href="./img/symbol-defs2.svg#icon-menu_40px"
                   ></use>
                 </svg>
               </button>
             </div>
-            <div class="menu-container is-open" id="menu-container" data-menu>
-              <ul class="site-nav list">
-                <li class="site-nav__item">
-                  <a
-                    href="../goit-markup-hw-08/index.html"
-                    class="link header-container__header-nav site-nav__link--title-color site-nav__link site-nav__link--current animation-color"
+            <div
+              class="menu-container js-menu-container is-open"
+              id="menu-container"
+              data-menu
+            >
+              <div class="container">
+                <div class="mob-menu-top">
+                  <button
+                    class="menu-container__button-close js-close-menu is-open"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="menu-container"
+                    data-menu-close
                   >
-                    Студия
-                  </a>
-                </li>
-                <li class="site-nav__item">
-                  <a
-                    href="../goit-markup-hw-08/portfolio.html"
-                    class="link header-container__header-nav site-nav__link--title-color site-nav__link animation-color"
-                  >
-                    Портфолио
-                  </a>
-                </li>
-                <li class="site-nav__item">
-                  <a
-                    href=" "
-                    class="link header-container__header-nav site-nav__link--title-color site-nav__link animation-color"
-                  >
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-              <ul class="site-auth site-auth__header-container list">
-                <li class="list site-auth__item site-auth__item--under">
-                  <a
-                    href="mailto:info@devstudio.com"
-                    class="link header-container__header-nav site-auth__link animation-color"
-                  >
-                    <svg class="site-auth__icon" width="16" height="12">
+                    <svg
+                      class=""
+                      aria-label="Переключатель мобильного меню"
+                      width="40"
+                      height="40"
+                    >
                       <use
-                        href="./img/symbol-defs2.svg#icon-envelope-hover"
+                        class="icon-close"
+                        href="./img/symbol-defs2.svg#icon-close_40px"
                       ></use>
+                      <!-- <use
+                    class="icon-menu"
+                    href="./img/symbol-defs2.svg#icon-menu_40px"
+                  ></use> -->
                     </svg>
-                    info@devstudio.com
-                  </a>
-                </li>
-                <li class="list site-auth__item site-auth__item--big-tel">
-                  <a
-                    href="tel:+380961111111"
-                    class="link header-container__header-nav site-auth__link animation-color"
-                  >
-                    <svg class="site-auth__icon" width="10" height="16">
-                      <use href="./img/symbol-defs2.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11
-                  </a>
-                </li>
-              </ul>
-              <ul class="sosial-list--name list">
-                <li class="sosial-list--name__item">
-                  <a class="sosial-list--name__link link" href="">
-                    <span lang="en">Instagram</span>
-                  </a>
-                </li>
-                <li class="sosial-list--name__item">
-                  <a class="sosial-list--name__link link" href="">
-                    <span lang="en">Twitter</span>
-                  </a>
-                </li>
-                <li class="sosial-list--name__item">
-                  <a class="sosial-list--name__link link" href="">
-                    <span lang="en">Facebook</span>
-                  </a>
-                </li>
-                <li class="sosial-list--name__item">
-                  <a class="sosial-list--name__link link" href="">
-                    <span lang="en">LinkedIn</span>
-                  </a>
-                </li>
-              </ul>
+                  </button>
+                  <ul class="site-nav list">
+                    <li class="site-nav__item">
+                      <a
+                        href="../goit-markup-hw-08/index.html"
+                        class="link header-container__header-nav site-nav__link--title-color site-nav__link site-nav__link--current animation-color"
+                      >
+                        Студия
+                      </a>
+                    </li>
+                    <li class="site-nav__item">
+                      <a
+                        href="../goit-markup-hw-08/portfolio.html"
+                        class="link header-container__header-nav site-nav__link--title-color site-nav__link animation-color"
+                      >
+                        Портфолио
+                      </a>
+                    </li>
+                    <li class="site-nav__item">
+                      <a
+                        href=" "
+                        class="link header-container__header-nav site-nav__link--title-color site-nav__link animation-color"
+                      >
+                        Контакты
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mob-menu-bottom">
+                  <ul class="site-auth site-auth__header-container list">
+                    <li class="list site-auth__item site-auth__item--under">
+                      <a
+                        href="mailto:info@devstudio.com"
+                        class="link header-container__header-nav site-auth__link animation-color"
+                      >
+                        <svg class="site-auth__icon" width="16" height="12">
+                          <use
+                            href="./img/symbol-defs2.svg#icon-envelope-hover"
+                          ></use>
+                        </svg>
+                        info@devstudio.com
+                      </a>
+                    </li>
+                    <li class="list site-auth__item site-auth__item--big-tel">
+                      <a
+                        href="tel:+380961111111"
+                        class="link header-container__header-nav site-auth__link animation-color"
+                      >
+                        <svg class="site-auth__icon" width="10" height="16">
+                          <use
+                            href="./img/symbol-defs2.svg#icon-smartphone"
+                          ></use>
+                        </svg>
+                        +38 096 111 11 11
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="sosial-list--name list">
+                    <li class="sosial-list--name__item">
+                      <a class="sosial-list--name__link link" href="">
+                        <span lang="en">Instagram</span>
+                      </a>
+                    </li>
+                    <li class="sosial-list--name__item">
+                      <a class="sosial-list--name__link link" href="">
+                        <span lang="en">Twitter</span>
+                      </a>
+                    </li>
+                    <li class="sosial-list--name__item">
+                      <a class="sosial-list--name__link link" href="">
+                        <span lang="en">Facebook</span>
+                      </a>
+                    </li>
+                    <li class="sosial-list--name__item">
+                      <a class="sosial-list--name__link link" href="">
+                        <span lang="en">LinkedIn</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+
             <!-- <div class="header-nav"> -->
           </nav>
 

@@ -1,8 +1,15 @@
 .site-auth {
   position: relative;
-  // display: flex;
-  // align-items: center;
-  // padding-left: 0px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include fonts($primary-text-color, 500, 12px, 1.17, 0.02em);
+  }
+  // @media screen and (max-width: 768px){
+  //   flex-direction: column-reverse;}
 
   &__link:hover,
   &__link:focus {
@@ -22,6 +29,9 @@
   }
   &__item:not(:last-child) {
     margin-right: $variable-grid;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__item--big-tel {
@@ -38,5 +48,11 @@
       left: 0px;
       @include fonts(null, null, 24px, 1.17, null);
     }
+  }
+}
+
+.site-auth-full {
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }

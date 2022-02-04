@@ -1,14 +1,40 @@
 .buttons-block {
-  // @extend %flex;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+
+  @extend %flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: -15px;
+  }
+  &__item {
+    @media screen and (max-width: 767px) {
+      margin-top: 15px;
+    }
+  }
 
   .buttons-block__item:not(:last-child) {
-    // margin-right: 8px;
+    margin-right: 8px;
   }
 }
 
-.buttons-block__gallery-main {
-  margin-bottom: 50px;
-}
+// .buttons-block__gallery-main {
+//   // margin-bottom: 40px;
+//   @media screen and (min-width: 768px) {
+//     margin-bottom: 30px;
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     margin-bottom: 50px;
+//   }
+// }
 
 .sacondary-button {
   &:hover {

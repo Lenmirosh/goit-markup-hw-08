@@ -79,7 +79,8 @@
     margin-left: calc(-1 * #{$variable-grid});
   }
   @media screen and (min-width: 1200px) {
-    margin-left: 0px;
+    // margin-left: 0px;
+    // margin-left: -15px;
   }
 
   .gallery__link {
@@ -96,17 +97,6 @@
         opacity: 1;
       }
     }
-  }
-
-  .gallery-main__title--hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0);
   }
 
   .gallery-main {
@@ -129,4 +119,14 @@
       }
     }
   }
+}
+.gallery-main__title--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }

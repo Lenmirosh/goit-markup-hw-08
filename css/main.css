@@ -129,6 +129,7 @@ img {
 @media screen and (min-width: 1200px) {
   .header-nav__logo {
     margin-right: 93px;
+    padding-left: 15px;
   }
 }
 
@@ -213,9 +214,31 @@ img {
 .header-container__header-nav {
   color: #757575;
   font-weight: 500;
-  font-size: 14;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 767px) {
+  .header-container__header-nav--big-tel {
+    color: #2196f3;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-auth__header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
 }
 
 .header-nav__thumb {
@@ -417,15 +440,20 @@ img {
     color: #2196f3;
     font-size: 34px;
     line-height: 1.17;
-    margin-bottom: 124px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .site-auth__item--big-tel {
+    color: #2196f3;
+    font-size: 24px;
+    line-height: 1.17;
   }
 }
 
 @media screen and (max-width: 767px) {
   .site-auth__item--under {
-    position: absolute;
-    top: 72px;
-    left: 0px;
     font-size: 24px;
     line-height: 1.17;
   }
@@ -947,6 +975,13 @@ img {
 @media screen and (min-width: 767px) {
   .sosial-list--name {
     display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sosial-list--name {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -1809,12 +1844,6 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .gallery-main__gallery {
-    margin-left: 0px;
-  }
-}
-
 .gallery-main__gallery .gallery__link {
   display: block;
 }
@@ -1829,17 +1858,6 @@ img {
           transform: translateY(0);
   pointer-events: none;
   opacity: 1;
-}
-
-.gallery-main__gallery .gallery-main__title--hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
 }
 
 .gallery-main__gallery .gallery-main {
@@ -1863,5 +1881,16 @@ img {
   .gallery-main__gallery .gallery__item:not(:last-child) {
     margin-bottom: 30px;
   }
+}
+
+.gallery-main__title--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 /*# sourceMappingURL=main.css.map */

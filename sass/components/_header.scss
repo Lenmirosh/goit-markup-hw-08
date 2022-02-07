@@ -29,11 +29,28 @@
     //   @include fonts($primary-text-color, 500, 12px, 1.17, 0.02em);
     // }
 
-    @include fonts($primary-text-color, 500, 14, 1.14, 0.02em);
+    @include fonts($primary-text-color, 500, null, 1.14, 0.02em);
+  }
+  // &--big-tel {
+  //   @media screen and (max-width: 767px) {
+  //     @include fonts($accent-color, 500, 34px, 1.14, 0.02em);
+  //   }
+  // }
+}
+
+.header-container__header-nav--big-tel {
+  @media screen and (max-width: 767px) {
+    @include fonts($accent-color, 500, 34px, 1.14, 0.02em);
   }
 }
 
 .site-auth__header-container {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+
   // margin-left: auto;
 }
 

@@ -53,15 +53,18 @@
   &__item--big-tel {
     @media screen and (max-width: 767px) {
       @include fonts($accent-color, null, 34px, 1.17, null);
-      margin-bottom: 124px;
+      margin-bottom: 32px;
+    }
+    @media screen and (max-width: 360px) {
+      @include fonts($accent-color, null, 24px, 1.17, null);
     }
   }
 
   &__item--under {
     @media screen and (max-width: 767px) {
-      position: absolute;
-      top: 72px;
-      left: 0px;
+      // position: absolute;
+      // top: 72px;
+      // left: 0px;
       @include fonts(null, null, 24px, 1.17, null);
     }
   }

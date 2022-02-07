@@ -28,8 +28,8 @@
   border-radius: 4px;
   @include border;
   padding: 6px 22px 6px 22px;
-  transition: 250ms shadow cubic-bezier(0.4, 0, 0.2, 1),
-    250ms bacground-color cubic-bezier(0.4, 0, 0.2, 1),
+  transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1),
+    250ms background-color cubic-bezier(0.4, 0, 0.2, 1),
     250ms color cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     color: $white-color;

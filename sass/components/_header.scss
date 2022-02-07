@@ -29,7 +29,7 @@
     //   @include fonts($primary-text-color, 500, 12px, 1.17, 0.02em);
     // }
 
-    @include fonts($primary-text-color, 500, 14, 1.17, 0.02em);
+    @include fonts($primary-text-color, 500, 14, 1.14, 0.02em);
   }
 }
 
@@ -40,7 +40,8 @@
 .header-nav__thumb {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  // justify-content: space-between;
   min-height: 60px;
 }
 .header-nav {
@@ -48,6 +49,7 @@
     display: inline-block;
     margin: 0px;
     padding: 0px;
+    margin-left: auto;
     border: none;
     background-color: transparent;
     &:hover,
@@ -60,12 +62,13 @@
   }
 }
 
-// .menu-container__button-close .icon-close {
-//   display: none;
-// }
-// .menu-container__button-close .icon-close {
-//   display: block;
-// }
-// .header-nav__button-open.is-open .icon-menu {
-//   display: none;
-// }
+.menu-container__button-close .icon-close {
+  display: none;
+}
+.menu-container__button-close .icon-close {
+  display: block;
+}
+.header-nav__button-open.is-open .icon-menu {
+  display: none;
+  // display: block;
+}

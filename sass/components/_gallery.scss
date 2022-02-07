@@ -6,12 +6,12 @@
 
   &__item {
     @media screen and (min-width: 768px) {
-      flex-basis: calc(100% / 2 - #{$variable-grid});
+      flex-basis: calc((100% - 60px) / 2);
       margin-top: $variable-grid;
       margin-left: $variable-grid;
     }
     @media screen and (min-width: 1200px) {
-      flex-basis: calc(100% / 3 - #{$variable-grid});
+      flex-basis: calc((100% - 90px) / 3);
       // margin-top: $variable-grid;
       // margin-left: $variable-grid;
     }
@@ -20,6 +20,11 @@
   &__card-description {
     padding: 20px 24px 20px 24px;
     @include border($color: #eeeeee);
+    &--big {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        min-height: 138px;
+      }
+    }
   }
 
   &__card-thumb {
@@ -73,7 +78,7 @@
 .gallery-main__gallery {
   //   margin-top: calc(-1 * #{$variable-grid});
   // margin-left: calc(-1 * #{$variable-grid});
-  margin-left: -15px;
+  // margin-left: -15px;
   @media screen and (min-width: 768px) {
     margin-top: calc(-1 * #{$variable-grid});
     margin-left: calc(-1 * #{$variable-grid});

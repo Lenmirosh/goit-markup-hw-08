@@ -122,14 +122,12 @@ img {
 @media screen and (min-width: 768px) {
   .header-nav__logo {
     margin-right: 88px;
-    padding-left: 15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .header-nav__logo {
     margin-right: 93px;
-    padding-left: 15px;
   }
 }
 
@@ -249,6 +247,13 @@ img {
       -ms-flex-align: center;
           align-items: center;
   min-height: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-nav__thumb {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .header-nav__button-open {
@@ -1759,8 +1764,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .gallery__item {
-    -ms-flex-preferred-size: calc(100% / 2 - 30px);
-        flex-basis: calc(100% / 2 - 30px);
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
     margin-top: 30px;
     margin-left: 30px;
   }
@@ -1768,14 +1773,20 @@ img {
 
 @media screen and (min-width: 1200px) {
   .gallery__item {
-    -ms-flex-preferred-size: calc(100% / 3 - 30px);
-        flex-basis: calc(100% / 3 - 30px);
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
   }
 }
 
 .gallery__card-description {
   padding: 20px 24px 20px 24px;
   border: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .gallery__card-description--big {
+    min-height: 138px;
+  }
 }
 
 .gallery__card-thumb {
@@ -1831,10 +1842,6 @@ img {
   font-size: 16px;
   line-height: 1.88;
   color: #757575;
-}
-
-.gallery-main__gallery {
-  margin-left: -15px;
 }
 
 @media screen and (min-width: 768px) {

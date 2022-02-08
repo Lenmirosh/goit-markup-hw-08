@@ -42,8 +42,15 @@
     top: 0px;
     left: 0px;
     /* opacity: 0; */
+    padding: 14px 24px 14px 24px;
+    @media screen and (min-width: 400px) {
+      padding: 50px 24px 50px 24px;
+    }
 
-    padding: 77px 24px 77px 24px;
+    @media screen and (min-width: 450px) {
+      padding: 77px 24px 77px 24px;
+    }
+
     @media screen and (min-width: 768px) {
       padding: 49px 24px 49px 24px;
     }

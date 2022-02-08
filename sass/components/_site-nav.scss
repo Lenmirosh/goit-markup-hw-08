@@ -75,7 +75,8 @@
 }
 
 .site-nav__link--current {
-  @media screen and (max-width: 767px) {
-    color: $accent-color;
-  }
+  color: $accent-color;
+  // @media screen and (max-width: 767px) {
+  //   color: $accent-color;
+  // }
 }

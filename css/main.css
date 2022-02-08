@@ -369,10 +369,8 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .site-nav__link--current {
-    color: #2196f3;
-  }
+.site-nav__link--current {
+  color: #2196f3;
 }
 
 .site-auth {
